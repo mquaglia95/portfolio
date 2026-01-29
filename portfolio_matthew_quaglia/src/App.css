@@ -1,0 +1,236 @@
+.App {
+  text-align: center;
+}
+.site-header {
+  position: fixed;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 9999;
+  box-shadow: none;
+  padding: 0.5rem 0;
+}
+
+/* Hover / focus */
+.nav a:hover,
+.nav a:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(3,18,33,0.22);
+  opacity: 1;
+  outline: none;
+}
+
+/* Selected/active tab (use class `active` on the link) */
+.nav a.active {
+  background: linear-gradient(180deg, var(--teal-deep), var(--green));
+  box-shadow: 0 14px 36px rgba(7,126,110,0.18);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+/* Keyboard focus ring */
+.nav a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(7,126,110,0.18), 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* Nav button base (inactive) - keep these top-level so they apply at all sizes */
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* width reduced to 75% of previous values */
+  width: clamp(48px, 7vw, 110px);
+  padding: 0.38em 0.45em;
+  background: #ffffff;
+  color: var(--nav-bg);
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(3,18,33,0.06);
+  text-decoration: none;
+  text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+  border: 1px solid rgba(7,55,99,0.08);
+  letter-spacing: 0.02em;
+  /* allow multi-line button labels instead of overflow */
+  white-space: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-size: clamp(11px, 1.2vw, 12.5px);
+  line-height: 1.1;
+}
+
+/* Ensure nav itself is a vertical stack (buttons stacked) */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+/* Hover / focus for inactive buttons */
+.nav a:not(.active):hover,
+.nav a:not(.active):focus {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(3,18,33,0.10);
+  background: #fbfdff;
+  outline: none;
+}
+
+/* Active button: use the dark gradient and white text */
+.nav a.active {
+  background: linear-gradient(180deg, rgba(7,55,99,0.98), rgba(7,55,99,0.9));
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(3,18,33,0.18);
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+/* Section titles (page tabs) */
+.section { position: relative; }
+.section-title {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #fff;
+  font-size: 2.75rem; /* 1.1rem * 2.5 */
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.hidden { /* keep existing h2s for screen readers/layout but visually hide */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --teal-deep: #007E6E;
+  --green: #73AF6F;
+  --sand: #D7C097;
+  --pale: #E7DEAF;
+  --nav-bg: #073763; /* deep blue that complements the palette */
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 3rem; /* top padding to avoid fixed header */
+}
+
+.about { 
+  background-color: var(--nav-bg);
+  color: #fff;
+  /* reduce top padding and overall height so About content sits higher on small screens */
+  padding: 3.5rem 1.5rem 2rem;
+  min-height: 85vh;
+}
+.projects { background-color: var(--sand); color: #111; }
+.resume { background-color: #ffffff; color: #111; }
+/* Make the section title visible on white background using the site's teal/green */
+.resume .section-title { color: var(--teal-deep); }
+.contact { background-color: var(--teal-deep); color: #fff; min-height: 50vh; padding: 3rem 1.5rem; }
+
+.content { display: flex; align-items: center; gap: 2rem; max-width: 1000px; width: 100%; }
+.profile-photo { width: 360px; height: 480px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 28px rgba(0,0,0,0.14); }
+.vortex-wrapper { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: hidden; }
+.vortex-svg { position: absolute; inset: 0; width: 120%; height: 120%; left: -10%; top: -10%; }
+.vortex-rotate-slow { animation: vortex-rotate 30s linear infinite; opacity: 0.85; }
+.vortex-rotate-fast { animation: vortex-rotate-reverse 18s linear infinite; opacity: 0.6; }
+.vortex-icons circle { transform-origin: 400px 300px; }
+
+.fireworks-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.section .content { position: relative; z-index: 2; }
+.section-title { z-index: 3; }
+
+@keyframes vortex-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes vortex-rotate-reverse { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+.bio { text-align: left; }
+.bio h1 { margin: 0 0 0.5rem 0; font-size: 3.6rem; line-height: 1; color: #fff; }
+.bio p { font-size: 1.6rem; color: rgba(0,0,0,0.8); margin: 0; }
+.details .icon { margin-right: 0.6rem; }
+
+.details { margin-top: 0.6rem; }
+.details .line { margin: 0.4rem 0; font-size: 1.2rem; display:flex; align-items:center; gap:0.6rem; }
+
+.education { margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.degree { display: flex; align-items: center; gap: 0.6rem; }
+.degree .icon { display:inline-flex; align-items:center; justify-content:center; font-size:1.2rem; margin-right: 0.2rem; }
+.degree-info { display: block; }
+.degree-title { font-size: 1.25rem; font-weight: 600; margin: 0; }
+.degree-school { font-size: 1.05rem; color: rgba(0,0,0,0.65); margin-top: 0.15rem; margin-left: 26px; }
+
+/* Make university names white when displayed on the About section's dark background */
+.about .degree-school { color: #fff; opacity: 0.95; margin-left: 26px; }
+.about .degree-title { color: #fff; }
+
+/* Ensure links inside About are white and accessible */
+.about a { color: #fff; text-decoration: underline; }
+.about a:focus, .about a:hover { opacity: 0.9; }
+
+.container { max-width: 1000px; width: 100%; padding: 0 1rem; }
+.project-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-top: 1rem; }
+.project-card { background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 6px 18px rgba(0,0,0,0.06); border-left: 6px solid var(--green); }
+
+.resume-content { background: transparent; }
+.resume-text { text-align: left; line-height: 1.45; }
+.resume-text h3 { margin-top: 1rem; color: #fff; }
+
+/* Professional Experience: modern job cards */
+.job-list { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.25rem; }
+.job-card { width: 100%; background: #fff; color: #111; border-radius: 12px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(15,20,25,0.06); border-left: 6px solid var(--teal-deep); }
+.job-header { display: grid; grid-template-columns: 1fr min-content; align-items: start; gap: 1rem; }
+.job-company { font-weight: 800; font-size: 1.05rem; }
+.job-role { font-style: italic; color: rgba(0,0,0,0.7); margin-top: 0.1rem; font-weight: 600; }
+.job-dates { color: rgba(0,0,0,0.55); font-size: 0.95rem; white-space: nowrap; }
+.job-bullets { margin: 0.75rem 0 0 1rem; padding: 0; }
+.job-bullets li { margin-bottom: 0.5rem; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .job-card { padding: 1rem; }
+}
+
+/* Role list inside a job card (multiple roles with dates) */
+.role-list { display: flex; flex-direction: column; gap: 0.25rem; margin-top: 0.5rem; }
+.role-item { display: block; }
+.role-item .job-role { font-weight: 700; font-style: normal; color: rgba(0,0,0,0.85); }
+.dates-column { display: flex; flex-direction: column; gap: 0.25rem; align-items: flex-end; }
+.dates-column .job-dates { color: rgba(0,0,0,0.55); font-size: 0.95rem; white-space: nowrap; }
+
+.contact a { color: #F0F8A4; }
+
+@media (max-width: 900px) {
+  .content { flex-direction: column; align-items: center; }
+  .profile-photo { width: 260px; height: 360px; }
+  .bio h1 { font-size: 2.6rem; text-align: center; }
+  .bio p { font-size: 1.1rem; text-align: center; }
+  /* Keep header left on small screens; scale nav spacing slightly */
+  .site-header { left: 0.75rem; }
+  .nav { gap: 0.6rem; padding: 0.4rem; }
+  .nav a { width: clamp(40px, 9vw, 90px); padding: 0.32em 0.38em; font-size: clamp(11px, 2.0vw, 12px); }
+}
+
+@media (max-width: 420px) {
+  .degree-school { margin-left: 0; }
+}
+
+@media (max-width: 420px) {
+  .profile-photo { width: 180px; height: 240px; }
+  .bio h1 { font-size: 1.9rem; }
+  .bio p { font-size: 1rem; }
+}
