@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import photo from './photo_of_me.jpeg';
 import FireworksBackground from './FireworksBackground';
-import portfolioVideo from './.portfolio-preview.mp4'; // Corrected filename to match the hidden file
+import portfolioVideo from './portfolio_preview.mp4';
 function App() {
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll('main section[id]'));
@@ -220,10 +220,24 @@ function App() {
           <h2 className="section-title">Contact</h2>
           <div className="container">
             <h2 className="hidden">Contact</h2>
-            <p>Phone: (508) 617-3824</p>
-            <p>Email: <a href="mailto:mquaglia95@gmail.com">mquaglia95@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/matthew-quaglia" target="_blank" rel="noreferrer">linkedin.com/in/matthew-quaglia</a></p>
-            <p>Location: New York, NY 10034</p>
+            <div className="contact-list">
+              <div className="contact-item">
+                <span className="contact-label">Phone</span>
+                <span className="contact-info">(508) 617-3824</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Email</span>
+                <span className="contact-info"><a href="mailto:mquaglia95@gmail.com">mquaglia95@gmail.com</a></span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">LinkedIn</span>
+                <span className="contact-info"><a href="https://www.linkedin.com/in/matthew-quaglia" target="_blank" rel="noreferrer">linkedin.com/in/matthew-quaglia</a></span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Location</span>
+                <span className="contact-info">New York, NY 10034</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>

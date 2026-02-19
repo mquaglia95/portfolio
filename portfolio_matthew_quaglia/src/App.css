@@ -140,11 +140,26 @@ html {
   padding: 3.5rem 1.5rem 2rem;
   min-height: 85vh;
 }
-.projects { background-color: #E0E0E0; color: #111; }
+.projects {
+  background-color: #F0F0F0; /* Muted grey */
+  color: #111;
+  /* Override generic section styles for a clean fit */
+  min-height: auto;
+  display: block;
+  padding: 4.5rem 1.5rem 2rem;
+}
 .resume { background-color: #ffffff; color: #111; }
 /* Make the section title visible on white background using the site's teal/green */
 .resume .section-title { color: var(--teal-deep); }
-.contact { background-color: var(--teal-deep); color: #fff; min-height: 50vh; padding: 3rem 1.5rem; }
+.projects .section-title { color: var(--nav-bg); }
+.contact {
+  background-color: var(--teal-deep);
+  color: #fff;
+  /* Override generic section styles for a clean fit, like .projects */
+  min-height: auto;
+  display: block;
+  padding: 6.5rem 1.5rem 4rem;
+}
 
 .content { display: flex; align-items: center; gap: 2rem; max-width: 1000px; width: 100%; }
 .profile-photo { width: 360px; height: 480px; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 28px rgba(0,0,0,0.14); }
@@ -183,7 +198,7 @@ html {
 .about a { color: #fff; text-decoration: underline; }
 .about a:focus, .about a:hover { opacity: 0.9; }
 
-.container { max-width: 1000px; width: 100%; padding: 0 1rem; }
+.container { max-width: 1000px; width: 100%; padding: 0 1rem; margin: 0 auto; }
 .project-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-top: 1rem; }
 .project-card { 
   background: #fff; 
@@ -218,6 +233,26 @@ html {
 .dates-column .job-dates { color: rgba(0,0,0,0.55); font-size: 0.95rem; white-space: nowrap; }
 
 .contact a { color: #F0F8A4; }
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between each contact item */
+  max-width: 420px; /* Constrain width to keep items closer together */
+  margin: 1rem auto 0;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between; /* Pushes label left and info right */
+  align-items: center;
+  font-size: 1.15rem; /* Makes text slightly larger */
+}
+
+.contact-label {
+  font-weight: 700; /* Bold */
+}
 
 @media (max-width: 900px) {
   .content { flex-direction: column; align-items: center; }
