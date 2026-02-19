@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import photo from './photo_of_me.jpeg';
 import FireworksBackground from './FireworksBackground';
-
+import portfolioVideo from './.portfolio-preview.mp4'; // Corrected filename to match the hidden file
 function App() {
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll('main section[id]'));
@@ -113,12 +113,30 @@ function App() {
         <section id="projects" className="section projects">
           <h2 className="section-title">Projects</h2>
           <div className="container">
-            <h2 className="hidden">Projects</h2>
-            <p>Example projects will go here. Replace these placeholders with your project descriptions, links, and screenshots.</p>
             <div className="project-list">
               <div className="project-card">
-                <h3>Project Title</h3>
-                <p>Short description of the project and technologies used.</p>
+                {/* Flex container to hold text content and video side-by-side */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
+                  {/* Video preview of the portfolio website */}
+                  <div style={{ flex: '1', minWidth: '250px', maxWidth: '500px' }}>
+                    <video src={portfolioVideo} autoPlay loop muted playsInline
+                           style={{ width: '100%', borderRadius: '12px', display: 'block', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  {/* Text content for the project description */}
+                  <div style={{ flex: '1', minWidth: '250px', textAlign: 'left' }}>
+                    <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Portfolio Website</h3>
+                    <p>
+                      A responsive personal portfolio website built to showcase my data science projects and professional experience.
+                      Features a custom canvas-based fireworks animation, interactive navigation, and a clean, modern UI.
+                    </p>
+                    <p><strong>Technologies:</strong> React, JavaScript, CSS</p>
+                    <div style={{ marginTop: '1rem' }}>
+                      <a href="https://github.com/mquaglia95/portfolio" target="_blank" rel="noreferrer">View Source Code</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
