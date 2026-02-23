@@ -1,0 +1,28 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/matthewquaglia/Documents/Documents - Matthew’s MacBook Air/Github Projects/portfolio_matthew_quaglia/portfolio_matthew_quaglia/build"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "/Users/matthewquaglia/Documents/Documents - Matthew’s MacBook Air/Github Projects/portfolio_matthew_quaglia/portfolio_matthew_quaglia"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
