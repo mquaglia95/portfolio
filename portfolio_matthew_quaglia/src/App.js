@@ -135,7 +135,7 @@ function App() {
                     <p><i>Python, Scikit-learn, XGBoost, Pandas</i></p>
                     <div style={{ marginTop: '1rem' }}>
                       <i>
-                      <a href="https://github.com/mquaglia95/vinho_verde_wine_classification" target="_blank" rel="noreferrer">github repo</a>
+                      <a href="https://github.com/mquaglia95/vinho_verde_classification_models" target="_blank" rel="noreferrer">github repo</a>
                       </i>
                     </div>
                   </div>
@@ -183,12 +183,8 @@ function App() {
                   <div className="job-header">
                     <div>
                       <div className="job-company">SmartSense by Digi — <span className="job-location">Remote</span></div>
-                      <div className="job-role">Analyst II — Data Scientist</div>
-                      <div className="job-role">Analyst I — Data Scientist</div>
-                    </div>
-                    <div className="dates-column">
-                      <div className="job-dates">Nov 2025 — Present</div>
-                      <div className="job-dates">Nov 2024 — Nov 2025</div>
+                      <div className="job-role">Analyst II — Data Scientist <span className="job-dates">Nov 2025 — Present</span></div>
+                      <div className="job-role">Analyst I — Data Scientist <span className="job-dates">Nov 2024 — Nov 2025</span></div>
                     </div>
                   </div>
                   <ul className="job-bullets">
@@ -202,9 +198,8 @@ function App() {
                   <div className="job-header">
                     <div>
                       <div className="job-company">SmartSense by Digi — <span className="job-location">Boston, MA</span></div>
-                      <div className="job-role">Data Analytics Intern</div>
+                      <div className="job-role">Data Analytics Intern <span className="job-dates">Jul 2024 — Aug 2024</span></div>
                     </div>
-                    <div className="job-dates">Jul 2024 — Aug 2024</div>
                   </div>
                   <ul className="job-bullets">
                     <li>Implemented major enhancements to a DOMO dashboard pertaining to hardware shipment, inventory, and returns data, pulled datasets from various sources, and displayed insightful visuals and tables for tracking and reporting needs</li>
@@ -217,9 +212,8 @@ function App() {
                   <div className="job-header">
                     <div>
                       <div className="job-company">Ahold Delhaize USA — Quincy, MA</div>
-                      <div className="job-role">Supply Chain Data Analytics Co-op</div>
+                      <div className="job-role">Supply Chain Data Analytics Co-op <span className="job-dates">Jan 2024 — Jun 2024</span></div>
                     </div>
-                    <div className="job-dates">Jan 2024 — Jun 2024</div>
                   </div>
                   <ul className="job-bullets">
                     <li>Utilized Python, PySpark, and SQL in a Databricks environment to develop and enhance methods of data cleansing, transformation, modeling, and integration for use in multiple projects</li>
@@ -232,9 +226,8 @@ function App() {
                   <div className="job-header">
                     <div>
                       <div className="job-company">Hexcel — West Valley City, UT</div>
-                      <div className="job-role">Continuous Improvement Engineering Co-op</div>
+                      <div className="job-role">Continuous Improvement Engineering Co-op <span className="job-dates">Jan 2023 — Jul 2023</span></div>
                     </div>
-                    <div className="job-dates">Jan 2023 — Jul 2023</div>
                   </div>
                   <ul className="job-bullets">
                     <li>Utilized Power BI to create comprehensive reports and dashboards for data summarization and visualization, writing queries for data flow within Microsoft SQL Server Management Studio</li>

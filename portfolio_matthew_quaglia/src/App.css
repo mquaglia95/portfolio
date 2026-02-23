@@ -214,10 +214,22 @@ html {
 /* Professional Experience: modern job cards */
 .job-list { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.25rem; }
 .job-card { width: 100%; background: #fff; color: #111; border-radius: 12px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(15,20,25,0.06); border-left: 6px solid var(--nav-bg); }
-.job-header { display: grid; grid-template-columns: 1fr min-content; align-items: start; gap: 1rem; }
+.job-header { display: block; }
 .job-company { font-weight: 800; font-size: 1.05rem; }
-.job-role { font-style: italic; color: rgba(0,0,0,0.7); margin-top: 0.1rem; font-weight: 600; }
-.job-dates { color: rgba(0,0,0,0.55); font-size: 0.95rem; white-space: nowrap; }
+.job-role {
+  font-style: italic;
+  color: rgba(0,0,0,0.7);
+  margin-top: 0.1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.job-dates {
+  color: rgba(0,0,0,0.55);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  font-style: italic;
+}
 .job-bullets { margin: 0.75rem 0 0 1rem; padding: 0; }
 .job-bullets li { margin-bottom: 0.5rem; line-height: 1.4; }
 
@@ -229,8 +241,7 @@ html {
 .role-list { display: flex; flex-direction: column; gap: 0.25rem; margin-top: 0.5rem; }
 .role-item { display: block; }
 .role-item .job-role { font-weight: 700; font-style: normal; color: rgba(0,0,0,0.85); }
-.dates-column { display: flex; flex-direction: column; gap: 0.25rem; align-items: flex-end; }
-.dates-column .job-dates { color: rgba(0,0,0,0.55); font-size: 0.95rem; white-space: nowrap; }
+
 
 .contact a { color: #F0F8A4; }
 
