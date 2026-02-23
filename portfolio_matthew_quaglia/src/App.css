@@ -150,7 +150,7 @@ html {
 }
 .resume { background-color: #ffffff; color: #111; }
 /* Make the section title visible on white background using the site's teal/green */
-.resume .section-title { color: var(--teal-deep); }
+.resume .section-title { color: var(--nav-bg); }
 .projects .section-title { color: var(--nav-bg); }
 .contact {
   background-color: var(--teal-deep);
@@ -213,7 +213,7 @@ html {
 
 /* Professional Experience: modern job cards */
 .job-list { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.25rem; }
-.job-card { width: 100%; background: #fff; color: #111; border-radius: 12px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(15,20,25,0.06); border-left: 6px solid var(--teal-deep); }
+.job-card { width: 100%; background: #fff; color: #111; border-radius: 12px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(15,20,25,0.06); border-left: 6px solid var(--nav-bg); }
 .job-header { display: grid; grid-template-columns: 1fr min-content; align-items: start; gap: 1rem; }
 .job-company { font-weight: 800; font-size: 1.05rem; }
 .job-role { font-style: italic; color: rgba(0,0,0,0.7); margin-top: 0.1rem; font-weight: 600; }

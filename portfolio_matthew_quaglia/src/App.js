@@ -3,6 +3,8 @@ import './App.css';
 import photo from './photo_of_me.jpeg';
 import FireworksBackground from './FireworksBackground';
 import portfolioVideo from './portfolio_preview.mp4';
+import vinhoVerdeVideo from './vinho_verde_prev.mp4';
+
 function App() {
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll('main section[id]'));
@@ -114,30 +116,59 @@ function App() {
           <h2 className="section-title">Projects</h2>
           <div className="container">
             <div className="project-list">
-              <div className="project-card">
+            <div className="project-card">
                 {/* Flex container to hold text content and video side-by-side */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
                   {/* Video preview of the portfolio website */}
                   <div style={{ flex: '1', minWidth: '250px', maxWidth: '500px' }}>
-                    <video src={portfolioVideo} autoPlay loop muted playsInline
+                    <video src={vinhoVerdeVideo} autoPlay loop muted playsInline
                            style={{ width: '100%', borderRadius: '12px', display: 'block', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                       Your browser does not support the video tag.
                     </video>
                   </div>
                   {/* Text content for the project description */}
                   <div style={{ flex: '1', minWidth: '250px', textAlign: 'left' }}>
-                    <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Portfolio Website</h3>
+                    <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Wine Quality Classifier: Vinho Verde</h3>
                     <p>
-                      A responsive personal portfolio website built to showcase my data science projects and professional experience.
-                      Features a custom canvas-based fireworks animation, interactive navigation, and a clean, modern UI.
+                    A machine learning project to predict the quality of Vinho Verde red wine. The project includes exploratory data analysis, handling class imbalance using SMOTE, and building predictive models with Random Forest and XGBoost. It compares multiclass classification with a 3-class quality bucketing approach.
                     </p>
-                    <p><strong>Technologies:</strong> React, JavaScript, CSS</p>
+                    <p><i>Python, Scikit-learn, XGBoost, Pandas</i></p>
                     <div style={{ marginTop: '1rem' }}>
-                      <a href="https://github.com/mquaglia95/portfolio" target="_blank" rel="noreferrer">View Source Code</a>
+                      <i>
+                      <a href="https://github.com/mquaglia95/vinho_verde_wine_classification" target="_blank" rel="noreferrer">github repo</a>
+                      </i>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="project-card">
+                {/* Flex container to hold text content and video side-by-side */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
+                  {/* Video preview of the portfolio website */}
+                  <div style={{ flex: '1', minWidth: '250px', maxWidth: '500px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                    <video src={portfolioVideo} autoPlay loop muted playsInline
+                           style={{ width: '100%', display: 'block', margin: '-20% 0' }}>
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  {/* Text content for the project description */}
+                  <div style={{ flex: '1', minWidth: '250px', textAlign: 'left' }}>
+                    <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>This Website!</h3>
+                    <p>
+                      My personal portfolio site, a built-from-scratch, deployed website with a responsive, modern UI displaying my projects, experience, and contact information in an organized, easily-accessible format.
+                    </p>
+                    <p><i>React, JavaScript, CSS</i></p>
+                    <div style={{ marginTop: '1rem' }}>
+                      <i>
+                      <a href="https://github.com/mquaglia95/portfolio" target="_blank" rel="noreferrer">github repo</a>
+                      </i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style={{ textAlign: 'center', fontStyle: 'italic', color: 'var(--nav-bg)', fontSize: '1.15rem', marginTop: '2rem', fontWeight: 'bold' }}>
+              More projects in development!
             </div>
           </div>
         </section>
@@ -216,8 +247,8 @@ function App() {
           </div>
         </section>
 
-        <section id="contact" className="section contact">
-          <h2 className="section-title">Contact</h2>
+        <section id="contact" className="section contact" style={{ backgroundColor: 'var(--nav-bg)', color: 'white' }}>
+          <h2 className="section-title" style={{ color: 'white' }}>Contact</h2>
           <div className="container">
             <h2 className="hidden">Contact</h2>
             <div className="contact-list">
@@ -227,11 +258,11 @@ function App() {
               </div>
               <div className="contact-item">
                 <span className="contact-label">Email</span>
-                <span className="contact-info"><a href="mailto:mquaglia95@gmail.com">mquaglia95@gmail.com</a></span>
+                <span className="contact-info"><a href="mailto:mquaglia95@gmail.com" style={{ color: 'white' }}>mquaglia95@gmail.com</a></span>
               </div>
               <div className="contact-item">
                 <span className="contact-label">LinkedIn</span>
-                <span className="contact-info"><a href="https://www.linkedin.com/in/matthew-quaglia" target="_blank" rel="noreferrer">linkedin.com/in/matthew-quaglia</a></span>
+                <span className="contact-info"><a href="https://www.linkedin.com/in/matthew-quaglia" target="_blank" rel="noreferrer" style={{ color: 'white' }}>linkedin.com/in/matthew-quaglia</a></span>
               </div>
               <div className="contact-item">
                 <span className="contact-label">Location</span>
