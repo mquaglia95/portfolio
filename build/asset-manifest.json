@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6193304d.css",
+    "main.js": "/static/js/main.f2c70de9.js",
+    "static/js/453.42d00fa7.chunk.js": "/static/js/453.42d00fa7.chunk.js",
+    "static/media/photo_of_me.jpeg": "/static/media/photo_of_me.05173d586da0c270b653.jpeg",
+    "static/media/vinho_verde_prev.mp4": "/static/media/vinho_verde_prev.a7b0a696e055e5073858.mp4",
+    "static/media/portfolio_preview.mp4": "/static/media/portfolio_preview.433ba4d8860c281ff380.mp4",
+    "index.html": "/index.html",
+    "main.6193304d.css.map": "/static/css/main.6193304d.css.map",
+    "main.f2c70de9.js.map": "/static/js/main.f2c70de9.js.map",
+    "453.42d00fa7.chunk.js.map": "/static/js/453.42d00fa7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6193304d.css",
+    "static/js/main.f2c70de9.js"
+  ]
+}
