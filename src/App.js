@@ -188,7 +188,7 @@ function App() {
                     </div>
                   </div>
                   <ul className="job-bullets">
-                    <li>Designed, trained, and deployed AI-powered chatbots, agentic workflows, and anomaly detection ML models for IoT sensor insights and monitoring, utilized in customer facing reports and within backend resources</li>
+                    <li>Design, train, and deploy AI-powered chatbots, agentic workflows, and anomaly detection ML models for IoT sensor insights and monitoring, utilized in customer facing reports and within backend resources</li>
                     <li>Build efficient automated pipelines and workflows that integrate Snowflake, Domo, AWS, MongoDB Datadog, and IoT data streams to optimize performance and minimize manual intervention</li>
                     <li>Design, develop, and deploy customer-facing dashboards and React applications using JavaScript, delivering actionable insights from IoT sensor data; build internal dashboards to monitor resource usage, conduct ad hoc cost analyses, and support data-driven decision-making</li>
                   </ul>
