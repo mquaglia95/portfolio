@@ -130,7 +130,7 @@ function App() {
                   <div style={{ flex: '1', minWidth: '250px', textAlign: 'left' }}>
                     <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Wine Quality Classifier: Vinho Verde</h3>
                     <p>
-                    A machine learning project to predict the quality of Vinho Verde red wine. The project includes exploratory data analysis, handling class imbalance using SMOTE, and building predictive models with Random Forest and XGBoost. It compares multiclass classification with a 3-class quality bucketing approach.
+                    A machine learning project to predict the quality of Vinho Verde red wine. The project includes exploratory data analysis, handling class imbalance using SMOTE, and building predictive models with Random Forest and XGBoost. 
                     </p>
                     <p><i>Python, Scikit-learn, XGBoost, Pandas</i></p>
                     <div style={{ marginTop: '1rem' }}>
