@@ -1,6 +1,6 @@
 # Matthew Quaglia's Personal Portfolio
 
-This is the repository for my personal portfolio website - [www.matthewquaglia.com](https://matthewquaglia.com), built with React.
+[www.matthewquaglia.com](https://matthewquaglia.com) - my personal portfolio project, built with React.
 
 ## About The Project
 

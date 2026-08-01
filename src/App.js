@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import photo from './photo_of_me.jpeg';
 import FireworksBackground from './FireworksBackground';
-import portfolioVideo from './portfolio_preview.mp4';
-import vinhoVerdeVideo from './vinho_verde_prev.mp4';
 
 function App() {
   useEffect(() => {
@@ -116,53 +114,45 @@ function App() {
           <h2 className="section-title">Projects</h2>
           <div className="container">
             <div className="project-list">
-            <div className="project-card">
-                {/* Flex container to hold text content and video side-by-side */}
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
-                  {/* Video preview of the portfolio website */}
-                  <div style={{ flex: '1', minWidth: '250px', maxWidth: '500px' }}>
-                    <video src={vinhoVerdeVideo} autoPlay loop muted playsInline
-                           style={{ width: '100%', borderRadius: '12px', display: 'block', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  {/* Text content for the project description */}
-                  <div style={{ flex: '1', minWidth: '250px', textAlign: 'left' }}>
-                    <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Wine Quality Classifier: Vinho Verde</h3>
-                    <p>
-                    A machine learning project to predict the quality of Vinho Verde red wine. The project includes exploratory data analysis, handling class imbalance using SMOTE, and building predictive models with Random Forest and XGBoost. 
-                    </p>
-                    <p><i>Python, Scikit-learn, XGBoost, Pandas</i></p>
-                    <div style={{ marginTop: '1rem' }}>
-                      <i>
-                      <a href="https://github.com/mquaglia95/vinho_verde_classification_models" target="_blank" rel="noreferrer">github repo</a>
-                      </i>
-                    </div>
+              <div className="project-card">
+                <div style={{ textAlign: 'left' }}>
+                  <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Crypto Tax Tracking</h3>
+                  <p>
+                    A full-stack dashboard that turns raw Coinbase transaction history into IRS-ready capital gains reporting. It applies HIFO (Highest-In, First-Out) cost-basis matching to minimize taxable gains, producing Form 8949 line items, open tax lots, and staking income alongside an interactive portfolio chart with live pricing.
+                  </p>
+                  <p><i>React, TypeScript, Node.js, Express, PostgreSQL</i></p>
+                  <div style={{ marginTop: '1rem' }}>
+                    <i>
+                    <a href="https://github.com/mquaglia95/crypto_tracking" target="_blank" rel="noreferrer">github repo</a>
+                    </i>
                   </div>
                 </div>
               </div>
               <div className="project-card">
-                {/* Flex container to hold text content and video side-by-side */}
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem', flexWrap: 'wrap' }}>
-                  {/* Video preview of the portfolio website */}
-                  <div style={{ flex: '1', minWidth: '250px', maxWidth: '500px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-                    <video src={portfolioVideo} autoPlay loop muted playsInline
-                           style={{ width: '100%', display: 'block', margin: '-20% 0' }}>
-                      Your browser does not support the video tag.
-                    </video>
+                <div style={{ textAlign: 'left' }}>
+                  <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>Wine Quality Classifier: Vinho Verde</h3>
+                  <p>
+                    A machine learning project to predict the quality of Vinho Verde red wine. The project includes exploratory data analysis, handling class imbalance using SMOTE, and building predictive models with Random Forest and XGBoost.
+                  </p>
+                  <p><i>Python, Scikit-learn, XGBoost, Pandas</i></p>
+                  <div style={{ marginTop: '1rem' }}>
+                    <i>
+                    <a href="https://github.com/mquaglia95/vinho_verde_classification_models" target="_blank" rel="noreferrer">github repo</a>
+                    </i>
                   </div>
-                  {/* Text content for the project description */}
-                  <div style={{ flex: '1', minWidth: '250px', textAlign: 'left' }}>
-                    <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>This Website!</h3>
-                    <p>
-                      My personal portfolio site, a built-from-scratch, deployed website with a responsive, modern UI displaying my projects, experience, and contact information in an organized, easily-accessible format.
-                    </p>
-                    <p><i>React, JavaScript, CSS</i></p>
-                    <div style={{ marginTop: '1rem' }}>
-                      <i>
-                      <a href="https://github.com/mquaglia95/portfolio" target="_blank" rel="noreferrer">github repo</a>
-                      </i>
-                    </div>
+                </div>
+              </div>
+              <div className="project-card">
+                <div style={{ textAlign: 'left' }}>
+                  <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>This Website!</h3>
+                  <p>
+                    My personal portfolio site, a built-from-scratch, deployed website with a responsive, modern UI displaying my projects, experience, and contact information in an organized, easily-accessible format.
+                  </p>
+                  <p><i>React, JavaScript, CSS</i></p>
+                  <div style={{ marginTop: '1rem' }}>
+                    <i>
+                    <a href="https://github.com/mquaglia95/portfolio" target="_blank" rel="noreferrer">github repo</a>
+                    </i>
                   </div>
                 </div>
               </div>
