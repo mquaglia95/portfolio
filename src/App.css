@@ -199,7 +199,7 @@ html {
 .about a:focus, .about a:hover { opacity: 0.9; }
 
 .container { max-width: 1000px; width: 100%; padding: 0 1rem; margin: 0 auto; }
-.project-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-top: 1rem; }
+.project-list { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1rem; }
 .project-card { 
   background: #fff; 
   border-radius: 16px; 
